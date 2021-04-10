@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="jQ-3.6.0.min.js"></script>
+    <script src="client.js"></script>
+    <title>Salary Calculator</title>
+</head>
+<body>
+    <header><h1>Salary Calculator</h1></header>
+    <main>
+        <section>
+            <h2>Add Employee</h2>
+            <input id="firstName" type="text" placeholder="First Name"/>
+            <input id="lastName" type="text" placeholder="Last Name"/> 
+            <input id="id" type="number" placeholder="ID"/> 
+            <input id="title" type="text" placeholder="Title"/>
+            <input id="annualSalary" type="number" placeholder="Annual Salary"/> 
+            <button id="submit">Submit</button>
+        </section>
+
+        <section>
+            <table>
+                <h3>Employees</h3>
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>ID</th>
+                        <th>Title</th>
+                        <th>Annual Salary</th>
+                        <th>&nbsp;</th>
+                    </tr>
+                </thead>
+                <tbody id="outEmployee">
+                    <tr>
+                        <td>John</td>
+                        <td>Doe</td>
+                        <td>001</td>
+                        <td>Assistant </td>
+                        <td>0000</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <h3>Total Monthly: $<span id="totalMonthly">&nbsp;</span></h3>
+    </main> 
+</body>
+</html>
