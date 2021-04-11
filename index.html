@@ -12,7 +12,7 @@
 <body>
     <header><h1>Salary Calculator</h1></header>
     <main>
-        <section>
+        <section id="addEmployee">
             <h2>Add Employee</h2>
             <input id="firstName" type="text" placeholder="First Name"/>
             <input id="lastName" type="text" placeholder="Last Name"/> 
@@ -22,9 +22,9 @@
             <button id="submit">Submit</button>
         </section>
 
-        <section>
+        <section id="employeeTable">
             <table>
-                <h3>Employees</h3>
+                <h2>Employees</h2>
                 <thead>
                     <tr>
                         <th>First Name</th>
@@ -39,15 +39,15 @@
                     <tr>
                         <td>John</td>
                         <td>Doe</td>
-                        <td>001</td>
+                        <td>0001</td>
                         <td>Assistant </td>
-                        <td>0000</td>
+                        <td>$00</td>
                         <td>&nbsp;</td>
                     </tr>
                 </tbody>
             </table>
         </section>
-        <h3>Total Monthly: $<span id="totalMonthly">&nbsp;</span></h3>
+        <h3>Total Monthly: $00<span id="totalMonthly">&nbsp;</span></h3>
     </main> 
 </body>
 </html>

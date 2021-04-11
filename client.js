@@ -1,11 +1,12 @@
 let employeeSalary = [];
+let totalMonthly = 0;
 
 $(document).ready(onReady);
 
 function onReady() {
     console.log('Hi jQuery');
     $('#submit').on('click', addEmployee);
- //   $('#outEmployee').on('click', '.delete', deleteEmployee);
+    $('#outEmployee').on('click', '.delete', deleteEmployee);
 }
 
 function addEmployee() {
@@ -35,35 +36,34 @@ function displayEmployee(firstName, lastName, id, title, annualSalary) {
     for ( let person of employeeSalary){
         console.log('in for loop');
         outEmployee.append(`
-                        <tr>
+                        <tr bordercolor="black">
                             <td>${person.firstName}</td>
                             <td>${person.lastName}</td>
                             <td>${person.id}</td>
                             <td>${person.title}</td>
-                            <td>${person.annualSalary}</td>
+                            <td>$${person.annualSalary}</td>
                             <td>
                             <button class="delete">Delete</button>
                             </td>
                         </tr>
         `)
     }
+    addSalary(annualSalary);
 }
-//     $('#outEmployee').empty(); // Clear out DOM
 
-//      for (let i=0; i<newEmployee.length; i++){
-//          console.log('in for loop');
-         
-//         $('#outEmployee').append(`
-//             <tr>
-//                     <td>${newEmployee[i].firstName}</td>
-//                     <td>${newEmployee[i].lastName}</td>
-//                     <td>${newEmployee[i].id}</td>
-//                     <td>${newEmployee[i].title}</td>
-//                     <td>${newEmployee[i].annualSalary}</td>
-//                     <td>
-//                         <button class="delete">Delete</button>
-//                     </td>
-//             </tr>
-//          `)
-//     }
-// }
+function addSalary(annualSalary) {
+    console.log('in addSalary');
+    totalMonthly += Number(annualSalary);
+    let tM = $('#totalMonthly');
+    tM.empty();
+    tM.append(totalMonthly);
+    if (totalMonthly > 20000) {
+        console.log('in if');
+        tM.append(`<p id="red"></p>`)
+    }
+}
+
+function deleteEmployee() {
+    console.log('delete employee');
+    $(this).closest('tr').remove();
+}

@@ -1,0 +1,38 @@
+header {
+    background-color: rgb(178, 185, 192);
+    text-align: center;
+    padding: 1rem;
+    border-bottom: 1px solid black;
+}
+body, h1 {
+    margin: auto;
+}
+table, th, td, tr {
+    border: 1px solid black;
+    width: 50%;
+    border-collapse: collapse;
+}
+th {
+    background-color: rgb(178, 185, 192);
+    padding-left: 2em;
+    padding-right: 2em;
+}
+td {
+    padding-left: 10px;
+}
+tr:nth-child(even) {
+    background-color: rgb(216, 219, 226);
+}
+#addEmployee {
+    padding-left: 10px;
+}
+#employeeTable {
+    padding-left: 10px;
+}
+h3 {
+    padding-left: 35%;
+}
+#red {
+    background-color: red;
+    width: 100px;
+}
