@@ -14,7 +14,7 @@ function addEmployee() {
     let employee = { // putting employee info into a object
         firstName: $('#firstName').val(),
         lastName: $('#lastName').val(),
-        id: $('#id').val(),
+        id: $('#id').val(),             // I could set up a class to clear all inputs at once $('.emptyinput').val('');
         title: $('#title').val(),
         annualSalary: $('#annualSalary').val(),
     };
@@ -26,7 +26,7 @@ function addEmployee() {
     $('#title').val('');
     $('#annualSalary').val('');
     displayEmployee(employee.firstName, // Calling DOM display function with employee inputs
-                    employee.lastName, 
+                    employee.lastName,  // Do I need input arguments, or could loop access directly?
                     employee.id, 
                     employee.title, 
                     employee.annualSalary);
@@ -63,7 +63,7 @@ function addSalary(annualSalary) {
     tM.append('$', totalMonthly); // Display on DOM
     if (totalMonthly > 20000) { // Creating red background alert if salaries exceed budget
         // TEST - console.log('in if');
-        tM.css('background-color', 'red');
+        tM.css('background-color', 'red'); // could use .addClass(cite a css class)
     }
 }
 
